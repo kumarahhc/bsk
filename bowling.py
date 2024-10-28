@@ -8,6 +8,8 @@ class BowlingGame:
         self.frames = []
 
     def add_frame(self, frame: Frame) -> None:
+        if len(self.frames) == 10:
+            raise
         self.frames.append(frame)
 
     def get_frame_at(self, i: int) -> Frame:
